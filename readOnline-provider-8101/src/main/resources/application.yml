@@ -2,6 +2,4 @@ server:
   port:8101
 mybatis-plus:
   mapper-locations: classpath:mapper/**/*.xml
-  type-aliases-package: com.ultrapower.hsj.seller.dao.domain
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.hfy.pojo
