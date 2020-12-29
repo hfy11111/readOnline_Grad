@@ -1,5 +1,0 @@
-server:
-  port:8101
-mybatis-plus:
-  mapper-locations: classpath:mapper/**/*.xml
-  type-aliases-package: com.hfy.pojo

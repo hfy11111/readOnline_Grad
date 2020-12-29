@@ -12,15 +12,58 @@
         <module>readonline-api</module>
         <module>readonline-provider-8101</module>
         <module>readOnline-provider-8101</module>
+        <module>code-generator</module>
     </modules>
+    <!--<dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.2</version>
+        </dependency>
+        &lt;!&ndash;<dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+        </dependency>&ndash;&gt;
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.30</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-annotation</artifactId>
+            <version>3.0.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>3.0.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hfy</groupId>
+            <artifactId>readonline-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <spring.cloud-version>Hoxton.SR8</spring.cloud-version>
-        <spring.boot-version>1.3.3.RELEASE</spring.boot-version>
+        <spring.boot-version>2.3.2.RELEASE</spring.boot-version>
         <Junit-version>4.12</Junit-version>
-        <lombok-version>1.18.8</lombok-version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -50,39 +93,72 @@
                 <scope>test</scope>
             </dependency>
 
-            <!--lomok-->
+            <!--数据库驱动-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+            </dependency>
+            <!--lombok-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>${lombok-version}</version>
+                <version>1.18.16</version>
             </dependency>
-
-            <!-- spring -->
+            <!--mybatis-plus-->
             <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>4.3.14.RELEASE</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
             </dependency>
             <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-orm</artifactId>
-                <version>4.3.14.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
-                <version>4.3.14.RELEASE</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
             </dependency>
-            <!-- mp 依赖 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus</artifactId>
-                <version>2.3</version>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.2.0</version>
             </dependency>
+            <dependency>
+                <groupId>com.spring4all</groupId>
+                <artifactId>spring-boot-starter-swagger</artifactId>
+                <version>1.5.1.RELEASE</version>
+            </dependency>
+            <!--freemarker引擎-->
+            <dependency>
+                <groupId>freemarker.ext.beans</groupId>
+                <artifactId>APIModle</artifactId>
+                <version>2.3.30</version>
+            </dependency>
+
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.9.2</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
 
 </project>
