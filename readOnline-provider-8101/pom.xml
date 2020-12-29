@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.hfy</groupId>
-            <artifactId>readonline-api</artifactId>
+            <artifactId>readOnline-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

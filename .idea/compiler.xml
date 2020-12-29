@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="readonline-api" />
+        <module name="readOnline-api" />
         <module name="code-generator" />
+        <module name="readOnline-consumer-80" />
         <module name="readOnline-provider-8101" />
       </profile>
     </annotationProcessing>

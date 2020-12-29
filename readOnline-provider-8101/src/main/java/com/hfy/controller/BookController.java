@@ -3,6 +3,8 @@ package com.hfy.controller;
 
 import com.hfy.mapper.BookMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +31,10 @@ public class BookController {
     @RequestMapping("/showAll")
     public String showAll(){
         return bookMapper.selectList(null).toString();
+    }
+    @GetMapping("/getById/{id}")
+    public String getById(@PathVariable("id") int id){
+        return bookMapper.selectById(id).toString();
     }
 
 }
