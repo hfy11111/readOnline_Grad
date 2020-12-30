@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.hfy.mapper")
-public class providerStartApp_8101 {
+public class providerStartApp_8001 {
     public static void main(String[] args) {
-        SpringApplication.run(providerStartApp_8101.class,args);
+        SpringApplication.run(providerStartApp_8001.class,args);
     }
 }

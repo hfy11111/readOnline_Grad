@@ -12,11 +12,11 @@ public class BookConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String REST_URL_PREFIX = "http://localhost:8100/";
+    private static final String REST_URL_PREFIX = "http://localhost:8001";
 
-    @RequestMapping("/consumer/get/{id}")
-    public Book get(@PathVariable("id") int id){
-        return restTemplate.getForObject(REST_URL_PREFIX+"/getById/"+id,Book.class);
+    @RequestMapping("/getById/{id}")
+    public String get(@PathVariable("id") int id){
+        return restTemplate.getForObject(REST_URL_PREFIX+"/book/getById/"+id,String.class);
     }
 
 }

@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>readOnline-api</module>
-        <module>readOnline-provider-8101</module>
+        <module>readOnline-provider-8001</module>
         <module>code-generator</module>
         <module>readOnline-consumer-80</module>
     </modules>
